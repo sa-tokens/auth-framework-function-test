@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test/")
 public class TestController {
 
-    // 测试从 session 上存取值  ---- http://localhost:8081/test/testSession
+    // 测试从从会话上下文存取值  ---- http://localhost:8081/test/testSession
     @RequestMapping("testSession")
     public AjaxJson test() {
         SaSession session = StpUtil.getSession();

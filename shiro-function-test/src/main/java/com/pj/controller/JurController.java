@@ -23,9 +23,9 @@ public class JurController {
 		Subject subject = SecurityUtils.getSubject();
 
 		// is 模式，返回 true 或 false
-		System.out.println("单个权限判断：" + subject.hasRole("admin"));
-		System.out.println("多个权限判断(and)：" + subject.hasAllRoles(Arrays.asList("admin", "dev-admin")));
-		System.out.println("多个权限判断(or)：" + (subject.hasRole("admin") || subject.hasRole("dev-admin")));
+		System.out.println("单个角色判断：" + subject.hasRole("admin"));
+		System.out.println("多个角色判断(and)：" + subject.hasAllRoles(Arrays.asList("admin", "dev-admin")));
+		System.out.println("多个角色判断(or)：" + (subject.hasRole("admin") || subject.hasRole("dev-admin")));
 
 		// check 模式，无角色时抛出异常
 		subject.checkRole("admin");  // 单个 check

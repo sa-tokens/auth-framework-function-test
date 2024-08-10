@@ -18,9 +18,9 @@ public class JurController {
 	@RequestMapping("assertRole")
 	public AjaxJson assertRole() {
 		// is 模式，返回 true 或 false
-		System.out.println("单个权限判断：" + StpUtil.hasRole("admin"));
-		System.out.println("多个权限判断(and)：" + StpUtil.hasRoleAnd("admin", "dev-admin"));
-		System.out.println("多个权限判断(or)：" + StpUtil.hasRoleOr("admin", "dev-admin"));
+		System.out.println("单个角色判断：" + StpUtil.hasRole("admin"));
+		System.out.println("多个角色判断(and)：" + StpUtil.hasRoleAnd("admin", "dev-admin"));
+		System.out.println("多个角色判断(or)：" + StpUtil.hasRoleOr("admin", "dev-admin"));
 
 		// check 模式，无角色时抛出异常
 		StpUtil.checkRole("admin");  // 单个 check

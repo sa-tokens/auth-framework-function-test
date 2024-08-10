@@ -3,14 +3,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.dev33</groupId>
-	<artifactId>shiro-function-test</artifactId>
+	<artifactId>spring-security-function-test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	
 	<!-- SpringBoot -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.18</version>
+		<version>3.3.2</version>
 		<relativePath/>
 	</parent>
 	
@@ -31,11 +31,10 @@
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 
-		<!-- Shiro 安全控制 -->
+		<!-- SpringSecurity -->
 		<dependency>
-			<groupId>org.apache.shiro</groupId>
-			<artifactId>shiro-spring-boot-web-starter</artifactId>
-			<version>1.13.0</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
 		<!-- thymeleaf 视图引擎 -->
@@ -44,18 +43,21 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
-		<!-- Shiro 整合 Thymeleaf 依赖 -->
+		<!-- SpringSecurity 整合 Thymeleaf 依赖 -->
 		<dependency>
-			<groupId>com.github.theborakompanioni</groupId>
-			<artifactId>thymeleaf-extras-shiro</artifactId>
-			<version>2.1.0</version>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
+			<version>3.1.2.RELEASE</version>
 		</dependency>
 
-		<!-- Shiro 集成 Redis -->
+		<!-- HttpSession 存储到 Redis -->
 		<dependency>
-			<groupId>org.crazycake</groupId>
-			<artifactId>shiro-redis</artifactId>
-			<version>3.3.1</version>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 
 		<!-- 构建工具 lombok -->
@@ -65,11 +67,11 @@
 		</dependency>
         
 		<!-- @ConfigurationProperties -->
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
-		</dependency>
+		</dependency>-->
 
 	</dependencies>
 
