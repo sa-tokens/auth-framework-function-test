@@ -21,4 +21,10 @@ public class HomeController {
         return new ModelAndView("index.html");
     }
 
+    // favicon.ico       --- http://localhost:8084/favicon.ico
+    @RequestMapping("/favicon.ico")
+    public Object favicon() {
+        return "favicon.ico";
+    }
+
 }
